@@ -1,0 +1,3 @@
+# RED
+
+Le fichier de référence pour les modèles de langage est disponible à l’adresse https://redcorp-tech.com/llms.txt

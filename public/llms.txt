@@ -1,0 +1,23 @@
+# RED
+
+> RED accompagne les entreprises dans leur digitalisation, leur infrastructure informatique et la formation de leurs équipes.
+
+Site officiel : https://redcorp-tech.com/
+Langue principale : français
+Zone desservie : France
+
+## Services
+
+- Digitalisation : sites web, applications, outils métier, présence en ligne et solutions cloud.
+- Infrastructure : ordinateurs, serveurs, réseaux, encaissement, périphériques et maintenance.
+- Accompagnement : conseil, cahier des charges, formation, support et évolution.
+
+## Contact
+
+- Email : contact@redcorp-tech.com
+- Adresse : 9 rue des Colonnes, 75002 Paris, France
+- Horaires : du lundi au dimanche, de 8 h à 20 h
+
+## Pages
+
+- Accueil : https://redcorp-tech.com/

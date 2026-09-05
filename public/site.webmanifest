@@ -1,0 +1,11 @@
+{
+  "name": "RED",
+  "short_name": "RED",
+  "description": "Digitalisation, infrastructure informatique et accompagnement des entreprises.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f1ec",
+  "theme_color": "#c04040",
+  "icons": []
+}
