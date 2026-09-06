@@ -20,23 +20,18 @@
 .project-copy h3 { margin-bottom: 8px; }
 .project-copy p { margin-top: 8px; }
 .print-viewer { margin: 0; min-width: 0; }
-.print-stage { perspective: 1200px; display: grid; place-items: center; min-height: 340px; padding: 35px; background: var(--client-stage); }
-.print-object { width: 100%; aspect-ratio: var(--aspect); transform: rotateX(10deg) rotateY(calc(-14deg + var(--turn))) rotateZ(-4deg); transform-style: preserve-3d; box-shadow: 5px 5px 0 #675b48, 15px 30px 35px #100c0533; transition: transform .3s ease; }
+.print-stage { perspective: 1200px; display: grid; place-items: center; min-height: 340px; padding: 35px; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.print-stage.dragging { cursor: grabbing; }
+.print-stage:focus-visible { outline: 2px solid #c8960c; outline-offset: 4px; }
+.print-object { width: 100%; aspect-ratio: var(--aspect); transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)); transform-style: preserve-3d; pointer-events: none; }
 .print-object img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.print-faces { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .65s ease; }
-.print-faces.flipped { transform: rotateY(180deg); }
+.print-faces { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
 .print-faces img { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.print-faces .print-back { transform: rotateY(180deg); }
-.print-object.flat { transform: none; box-shadow: 0 3px 8px #100c0522; }
+.print-faces img:first-child { transform: translateZ(.4px); }
+.print-faces .print-back { transform: rotateY(180deg) translateZ(.4px); }
 .print-stage.portrait { min-height: 650px; padding: 45px; }
-.portrait .print-object { max-width: 290px; transform: rotateX(5deg) rotateY(calc(14deg + var(--turn))) rotateZ(3deg); }
-.portrait .print-object.flat { transform: none; }
+.portrait .print-object { max-width: 290px; }
 .print-viewer figcaption { font-size: 13px; text-align: center; margin: 24px 0 15px; color: var(--client-muted); }
-.print-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.print-controls button,.print-controls a { display: inline-flex; align-items: center; padding: 10px 14px; min-height: 44px; border: 1px solid var(--client-line); background: transparent; border-radius: 4px; font-size: 13px; cursor: pointer; }
-.print-controls button[aria-pressed=true] { background: #e8b422; color: #100c05; }
-.rotation-control { display: flex; gap: 15px; align-items: center; justify-content: center; margin: 20px 0; font-size: 13px; }
-.rotation-control input { width: 150px; accent-color: #8b3a2a; }
 .identity-section { text-align: center; border-block: 1px solid var(--client-line); padding-block: 85px; }
 .logo-display { display: grid; place-items: center; margin: 45px auto 25px; background: #100c05; width: min(100%,520px); padding: 45px; }
 .logo-display img { width: min(100%,320px); height: auto; }
