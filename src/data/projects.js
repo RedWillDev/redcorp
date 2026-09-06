@@ -1,15 +1,15 @@
 const assets = '/projects/art-du-barber/'
 
 export const portfolio = {
-  title: 'Nos clients, leurs projets.',
+  title: 'Des projets, du code au terrain.',
   eyebrow: 'Réalisations / RED',
-  introduction: 'Des identités et des supports pensés pour les entreprises qui les font vivre. Découvrez les projets et les choix derrière chaque création.',
+  introduction: 'Identité visuelle, développement logiciel et interventions terrain : découvrez des réalisations clients, une expérience en entreprise et un projet personnel, avec leurs contextes et leurs approches.',
   open: 'Découvrir le projet',
   back: 'Toutes les réalisations',
   home: 'Accueil',
   contact: 'Nous contacter',
   footer: 'Une identité à construire ? Parlons de votre projet.',
-  seo: { title: 'Réalisations et projets clients — RED', description: 'Découvrez les réalisations de RED : identité visuelle, carte de visite et flyer Art du Barber, présentés avec leurs choix de design.' }
+  seo: { title: 'Réalisations, développement et projets terrain — RED', description: 'Découvrez Art du Barber, la plateforme personnelle BULLRUN de veille BTP et une expérience de maintenance et audit chez M’Hani.' }
 }
 
 export const barber = {
@@ -74,4 +74,58 @@ export const barber = {
   closingText: 'Retrouvez le salon dans son univers numérique et découvrez ses informations actuelles.'
 }
 
-export const projects = [barber]
+export const bullrun = {
+  slug: 'bullrun',
+  name: 'BULLRUN',
+  category: 'Développement logiciel · Veille BTP',
+  location: 'Projet personnel · En évolution',
+  kind: 'software',
+  eyebrow: 'Du besoin métier au logiciel',
+  title: 'Les opportunités BTP, réunies au même endroit.',
+  intro: 'BULLRUN est un projet personnel de veille et de suivi des appels d’offres dans le bâtiment et les travaux publics. Son objectif : centraliser les opportunités et faciliter leur sélection, sans multiplier les recherches manuelles.',
+  seo: { title: 'BULLRUN : projet de veille automatisée BTP — RED', description: 'Découvrez BULLRUN, un projet personnel de plateforme de veille et de suivi des appels d’offres BTP : collecte automatisée, centralisation et sélection.' },
+  preview: { label: 'Veille automatisée', title: 'Repérer. Centraliser. Sélectionner.', tags: ['Appels d’offres', 'Collecte', 'Suivi'], symbol: '01 / SOFTWARE' },
+  facts: [{ label: 'Cadre', value: 'Projet personnel' }, { label: 'Secteur', value: 'Bâtiment et travaux publics' }, { label: 'Statut', value: 'Expérimentation et itérations' }],
+  context: { title: 'Une expérience métier comme point de départ.', text: 'Après mon passage chez M’Hani, j’ai poursuivi mes expérimentations autour de besoins concrets du BTP. BULLRUN s’inscrit dans cette continuité : un projet personnel pour tester des approches techniques et apprendre en construisant.' },
+  diagram: { label: 'Principe de fonctionnement', title: 'De la veille à la sélection.', note: 'Schéma du parcours fonctionnel.', steps: [
+    { title: 'Surveiller', text: 'Suivre les appels d’offres et opportunités publiés dans le secteur du BTP.' },
+    { title: 'Centraliser', text: 'Rassembler les informations collectées dans un espace de suivi commun.' },
+    { title: 'Sélectionner', text: 'Repérer les projets intéressants pour une entreprise, un artisan ou un bureau d’études.' }
+  ] },
+  sections: [
+    { title: 'Automatiser la collecte', text: 'La veille automatique vise à réduire les recherches répétitives sur plusieurs plateformes et à faciliter la détection de nouvelles opportunités.' },
+    { title: 'Organiser l’information', text: 'La centralisation permet de retrouver les opportunités au même endroit et de faciliter leur suivi commercial.' },
+    { title: 'Construire par itérations', text: 'Le projet reste en évolution. Il sert à expérimenter, confronter les idées à un usage concret et faire progresser la solution grâce aux retours.' }
+  ],
+  conclusion: { title: 'Un projet ouvert aux retours.', text: 'BULLRUN illustre mon intérêt pour les outils qui répondent à un besoin métier. Les retours, idées d’amélioration et contributions participent à la suite de son développement.' },
+  action: { label: 'Découvrir BULLRUN', href: 'https://lnkd.in/eHc9nWQ9', external: true }
+}
+
+export const mhani = {
+  slug: 'mhani-terrain',
+  name: 'M’Hani — sur le terrain',
+  category: 'Maintenance informatique · Audit opérationnel',
+  location: 'Expérience en entreprise · Secteur BTP',
+  kind: 'field',
+  eyebrow: 'Le numérique au contact des équipes',
+  title: 'Comprendre les usages. Faire fonctionner les outils.',
+  intro: 'Chez M’Hani, j’ai participé à un projet transversal mêlant support technique, développement logiciel et audit opérationnel. Ce volet présente le travail de terrain : diagnostic, réparation, maintenance préventive et analyse des processus.',
+  seo: { title: 'M’Hani : maintenance informatique et audit terrain — RED', description: 'Retour sur une expérience chez M’Hani dans le BTP : diagnostic et réparation du matériel, maintenance préventive et audits techniques et organisationnels.' },
+  preview: { label: 'Intervention terrain', title: 'Diagnostiquer. Réparer. Accompagner.', tags: ['Hardware', 'Maintenance', 'Audit'], symbol: '02 / TERRAIN' },
+  facts: [{ label: 'Cadre', value: 'Participation en entreprise' }, { label: 'Secteur', value: 'Bâtiment et travaux publics' }, { label: 'Domaines', value: 'Support technique et audit' }],
+  context: { title: 'Un projet transversal chez M’Hani.', text: 'L’expérience associait des interventions sur les équipements informatiques, des audits techniques et organisationnels, ainsi que la participation au développement d’une plateforme de veille BTP. Le matériel et les usages ont été abordés ensemble pour comprendre les besoins opérationnels.' },
+  diagram: { label: 'Approche terrain', title: 'Observer, intervenir, améliorer.', note: 'Les trois dimensions de l’intervention.', steps: [
+    { title: 'Diagnostiquer', text: 'Identifier les problèmes techniques et comprendre leurs effets sur les usages quotidiens.' },
+    { title: 'Intervenir', text: 'Réparer les équipements et réaliser des opérations de maintenance préventive.' },
+    { title: 'Analyser', text: 'Examiner les processus et identifier des axes d’amélioration techniques et organisationnels.' }
+  ] },
+  sections: [
+    { title: 'Réparation et maintenance hardware', text: 'Diagnostic, réparation et maintenance préventive des équipements informatiques, avec pour objectif de soutenir la continuité des activités et le bon fonctionnement du parc.' },
+    { title: 'Audit technique et organisationnel', text: 'Analyse des outils et des processus internes pour repérer les axes d’amélioration et contribuer à une organisation opérationnelle plus efficace.' },
+    { title: 'Une lecture globale du besoin', text: 'Le travail de terrain s’inscrivait dans une expérience combinant support, logiciel et audit. Cette complémentarité relie les choix techniques aux contraintes des équipes.' }
+  ],
+  conclusion: { title: 'Une expérience qui nourrit la pratique.', text: 'Ce projet a renforcé mes compétences en analyse technique, gestion de projet et accompagnement opérationnel. Il rappelle qu’une solution informatique doit aussi être adaptée aux personnes qui l’utilisent.' },
+  action: { label: 'Parlons de votre infrastructure', href: '/#contact', external: false }
+}
+
+export const projects = [barber, bullrun, mhani]
