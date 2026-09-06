@@ -23,7 +23,17 @@ Zone desservie : France
 - Accueil : https://redcorp-tech.com/
 - Réalisations : https://redcorp-tech.com/realisations
 - Projet Art du Barber : https://redcorp-tech.com/realisations/art-du-barber
+- BULLRUN : https://redcorp-tech.com/realisations/bullrun
+- M’Hani, intervention terrain : https://redcorp-tech.com/realisations/mhani-terrain
 
 ## Art du Barber
 
 Présentation de la carte de visite et du flyer recto verso, du logo, de la moustache dorée et de la palette de couleurs. Les prix visibles correspondent aux supports fournis et ne constituent pas un tarif actualisé. Site du salon : https://artdubarber.fr/
+
+## BULLRUN
+
+Projet personnel en évolution, développé après une expérience chez M’Hani. Outil de veille et de suivi des appels d’offres BTP, avec collecte automatisée et centralisation des opportunités. Il n’est pas présenté comme une livraison client M’Hani ni comme une solution finalisée.
+
+## M’Hani — intervention terrain
+
+Expérience en entreprise dans le BTP : participation au diagnostic, à la réparation et à la maintenance préventive des équipements informatiques, ainsi qu’à des audits techniques et organisationnels. Le projet transversal comprenait aussi la participation au développement d’une plateforme de veille BTP.
