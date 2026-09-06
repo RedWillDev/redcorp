@@ -76,6 +76,7 @@ export const barber = {
 
 export const bullrun = {
   slug: 'bullrun',
+  logo: { src: '/projects/bullrun/logo.svg', alt: 'Logo BULLRUN : taureau aux cornes orange', width: 100, height: 100, wordmark: 'BULLRUN', background: '#fff7ed' },
   name: 'BULLRUN',
   category: 'Développement logiciel · Veille BTP',
   location: 'Projet personnel · En évolution',
@@ -98,11 +99,12 @@ export const bullrun = {
     { title: 'Construire par itérations', text: 'Le projet reste en évolution. Il sert à expérimenter, confronter les idées à un usage concret et faire progresser la solution grâce aux retours.' }
   ],
   conclusion: { title: 'Un projet ouvert aux retours.', text: 'BULLRUN illustre mon intérêt pour les outils qui répondent à un besoin métier. Les retours, idées d’amélioration et contributions participent à la suite de son développement.' },
-  action: { label: 'Découvrir BULLRUN', href: 'https://lnkd.in/eHc9nWQ9', external: true }
+  action: { label: 'Découvrir BULLRUN', href: 'https://bullrun.redcorp-tech.com/', external: true }
 }
 
 export const mhani = {
   slug: 'mhani-terrain',
+  logo: { src: '/projects/mhani/logo.svg', alt: 'Logo M’Hani : fleur multicolore et nom bleu', width: 467, height: 150, background: '#eeedf5' },
   name: 'M’Hani — sur le terrain',
   category: 'Maintenance informatique · Audits · Sécurité',
   location: 'Expérience en entreprise · Secteur BTP',
