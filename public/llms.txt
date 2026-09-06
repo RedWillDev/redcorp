@@ -32,6 +32,8 @@ Présentation de la carte de visite et du flyer recto verso, du logo, de la mous
 
 ## BULLRUN
 
+Application : https://bullrun.redcorp-tech.com/
+
 Projet personnel en évolution, développé après une expérience chez M’Hani. Outil de veille et de suivi des appels d’offres BTP, avec collecte automatisée et centralisation des opportunités. Il n’est pas présenté comme une livraison client M’Hani ni comme une solution finalisée.
 
 ## M’Hani — intervention terrain
