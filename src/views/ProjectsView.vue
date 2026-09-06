@@ -1,5 +1,6 @@
 <script setup>
-import { portfolio, projects } from '../data/projects'
+import { projects } from '../data/projects'
+import { portfolio } from '../data/portfolio'
 import FloatingAction from '../components/FloatingAction.vue'
 </script>
 
