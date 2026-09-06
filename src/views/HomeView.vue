@@ -1,52 +1,17 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { site } from '../data/site'
+import FloatingAction from '../components/FloatingAction.vue'
 
 const activeExpertise = ref(site.expertise[0].id)
 const comparison = ref('with')
-const menuOpen = ref(false)
-const darkMode = ref(false)
 const currentExpertise = computed(() => site.expertise.find((item) => item.id === activeExpertise.value))
 
-const applyTheme = (dark) => {
-  darkMode.value = dark
-  document.documentElement.classList.toggle('dark', dark)
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101216' : '#f4f1ec')
-}
-
-const toggleTheme = () => {
-  applyTheme(!darkMode.value)
-  localStorage.setItem('red-theme', darkMode.value ? 'dark' : 'light')
-}
-
-onMounted(() => {
-  const stored = localStorage.getItem('red-theme')
-  applyTheme(stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches)
-})
 </script>
 
 <template>
   <div class="site-frame">
-    <header class="site-header">
-      <nav class="shell navbar" aria-label="Navigation principale">
-        <a class="logo" href="#accueil" aria-label="RED, accueil">{{ site.name }}</a>
-        <div class="desktop-nav">
-          <a v-for="item in site.navigation" :key="item.href" :href="item.href">{{ item.label }}</a>
-        </div>
-        <div class="nav-actions">
-          <button class="icon-button" type="button" :aria-label="darkMode ? 'Activer le mode jour' : 'Activer le mode nuit'" @click="toggleTheme">
-            <span aria-hidden="true">{{ darkMode ? '☀' : '☾' }}</span>
-          </button>
-          <a class="header-cta" href="#contact">Nous contacter <span aria-hidden="true">↗</span></a>
-          <button class="menu-button" type="button" :aria-expanded="menuOpen" aria-controls="mobile-navigation" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
-            <span></span><span></span>
-          </button>
-        </div>
-      </nav>
-      <div v-if="menuOpen" id="mobile-navigation" class="mobile-nav shell">
-        <a v-for="item in site.navigation" :key="item.href" :href="item.href" @click="menuOpen = false">{{ item.label }}</a>
-      </div>
-    </header>
+
 
     <main>
       <section id="accueil" class="shell hero section-anchor">
@@ -151,12 +116,12 @@ onMounted(() => {
       <section id="contact" class="shell contact-section section-anchor">
         <div class="contact-card"><div><p class="eyebrow">Votre prochain projet</p><h2>Expliquez-nous votre besoin.<br>Nous nous occupons du reste.</h2></div><a class="button contact-button" :href="`mailto:${site.contact.email}`">Nous contacter <span aria-hidden="true">↗</span></a></div>
         <footer>
-          <div class="footer-grid"><div><div class="logo">{{ site.name }}</div><p>Digitalisation, infrastructure et accompagnement pour des entreprises qui veulent avancer simplement.</p></div><div><strong>Navigation</strong><a v-for="item in site.navigation" :key="item.href" :href="item.href">{{ item.label }}</a></div><div><strong>Contact</strong><a :href="`mailto:${site.contact.email}`">{{ site.contact.email }}</a><span>{{ site.contact.address }}</span><span>{{ site.contact.hours }}</span></div></div>
+          <div class="footer-grid"><div><div class="logo">{{ site.name }}</div><p>Digitalisation, infrastructure et accompagnement pour des entreprises qui veulent avancer simplement.</p></div><div><strong>Navigation</strong><a v-for="item in site.navbar" :key="item.href" :href="item.href">{{ item.label }}</a></div><div><strong>Contact</strong><a :href="`mailto:${site.contact.email}`">{{ site.contact.email }}</a><span>{{ site.contact.address }}</span><span>{{ site.contact.hours }}</span></div></div>
           <div class="legal"><span>© {{ new Date().getFullYear() }} {{ site.name }}</span><span>{{ site.tagline }}</span></div>
         </footer>
       </section>
     </main>
 
-    <a class="mobile-contact" href="#contact"><span>Nous contacter</span><span aria-hidden="true">↗</span></a>
+    <FloatingAction href="#contact" label="Nous contacter" />
   </div>
 </template>

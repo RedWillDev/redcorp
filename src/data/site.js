@@ -2,7 +2,8 @@ export const site = {
   name: 'RED',
   url: 'https://redcorp-tech.com',
   tagline: 'Le prix. La qualité.',
-  navigation: [
+  navbar: [
+    { label: 'Réalisations', href: '/realisations' },
     { label: 'Expertises', href: '#expertises' },
     { label: 'Pourquoi RED', href: '#pourquoi-red' },
     { label: 'Solutions', href: '#solutions' },

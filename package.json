@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.3.0",
+    "@fontsource/lato": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "@unhead/vue": "^2.1.17",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1"
   },

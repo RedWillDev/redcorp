@@ -21,3 +21,9 @@ Zone desservie : France
 ## Pages
 
 - Accueil : https://redcorp-tech.com/
+- Réalisations : https://redcorp-tech.com/realisations
+- Projet Art du Barber : https://redcorp-tech.com/realisations/art-du-barber
+
+## Art du Barber
+
+Présentation de la carte de visite et du flyer recto verso, du logo, de la moustache dorée et de la palette de couleurs. Les prix visibles correspondent aux supports fournis et ne constituent pas un tarif actualisé. Site du salon : https://artdubarber.fr/
