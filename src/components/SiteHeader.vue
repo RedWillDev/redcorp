@@ -24,20 +24,21 @@ onMounted(() => {
       <nav class="shell navbar" aria-label="Navigation principale">
         <a class="logo" href="/#accueil" aria-label="RED, accueil">{{ site.name }}</a>
         <div class="desktop-nav">
-          <a v-for="item in site.navbar" :key="item.href" :href="item.href.startsWith('#') ? '/' + item.href : item.href">{{ item.label }}</a>
+          <a v-for="item in site.navbar" :key="item.href" :class="{ 'nav-featured': item.featured }" :href="item.href.startsWith('#') ? '/' + item.href : item.href">{{ item.label }}</a>
         </div>
         <div class="nav-actions">
           <button class="icon-button" type="button" :aria-label="darkMode ? 'Activer le mode jour' : 'Activer le mode nuit'" @click="toggleTheme">
             <span aria-hidden="true">{{ darkMode ? '☀' : '☾' }}</span>
           </button>
-          <a class="header-cta" href="/#contact">Nous contacter <span aria-hidden="true">↗</span></a>
+          <a class="header-cta" :href="site.navbarAction.href">{{ site.navbarAction.label }} <span aria-hidden="true">↗</span></a>
           <button class="menu-button" type="button" :aria-expanded="menuOpen" aria-controls="mobile-navigation" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
             <span></span><span></span>
           </button>
         </div>
       </nav>
       <div v-if="menuOpen" id="mobile-navigation" class="mobile-nav shell">
-        <a v-for="item in site.navbar" :key="item.href" :href="item.href.startsWith('#') ? '/' + item.href : item.href" @click="menuOpen = false">{{ item.label }}</a>
+        <a v-for="item in site.navbar" :key="item.href" :class="{ 'nav-featured': item.featured }" :href="item.href.startsWith('#') ? '/' + item.href : item.href" @click="menuOpen = false">{{ item.label }}</a>
+        <a :href="site.navbarAction.href" @click="menuOpen = false">{{ site.navbarAction.label }} ↗</a>
       </div>
     </header>
 </template>
