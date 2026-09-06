@@ -3,18 +3,17 @@ export const site = {
   url: 'https://redcorp-tech.com',
   tagline: 'Le prix. La qualité.',
   navbar: [
-    { label: 'Réalisations', href: '/realisations' },
+    { label: 'Réalisations', href: '/realisations', featured: true },
     { label: 'Expertises', href: '#expertises' },
-    { label: 'Pourquoi RED', href: '#pourquoi-red' },
-    { label: 'Solutions', href: '#solutions' },
-    { label: 'Méthode', href: '#methode' }
+    { label: 'Notre méthode', href: '#methode' }
   ],
+  navbarAction: { label: 'Parlons de votre projet', href: '/#contact' },
   hero: {
     eyebrow: 'Partenaire numérique des entreprises',
     title: 'La technologie qui simplifie vraiment votre quotidien.',
     description: 'RED conçoit, déploie et maintient des solutions numériques fiables, adaptées à votre activité et accompagnées de bout en bout.',
-    primaryAction: { label: 'Démarrer un projet', href: '#contact' },
-    secondaryAction: { label: 'Découvrir nos expertises', href: '#expertises' }
+    primaryAction: { label: 'Voir nos réalisations', href: '/realisations' },
+    secondaryAction: { label: 'Parlons de votre projet', href: '#contact' }
   },
   promises: ['Un interlocuteur unique', 'Des solutions sur mesure', 'Un suivi durable'],
   expertise: [
