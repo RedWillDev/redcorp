@@ -36,4 +36,4 @@ Projet personnel en évolution, développé après une expérience chez M’Hani
 
 ## M’Hani — intervention terrain
 
-Expérience en entreprise dans le BTP : participation au diagnostic, à la réparation et à la maintenance préventive des équipements informatiques, ainsi qu’à des audits techniques et organisationnels. Le projet transversal comprenait aussi la participation au développement d’une plateforme de veille BTP.
+Expérience en entreprise dans le BTP : participation au diagnostic, à la réparation et à la maintenance préventive des équipements informatiques, ainsi qu’à des audits techniques, organisationnels et de sécurité. Le projet transversal comprenait aussi la participation au développement d’une plateforme de veille BTP.
