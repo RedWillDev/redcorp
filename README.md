@@ -23,3 +23,5 @@ Les textes et visuels des réalisations sont centralisés dans `src/data/project
 `FloatingAction.vue` fournit le bouton flottant mobile partagé. `SiteHeader.vue` fournit la navigation sticky et le thème. `PrintObject.vue` présente les supports recto verso en perspective CSS, avec rotation, vue à plat et agrandissement.
 
 Le build pré-rend `/`, `/realisations` et `/realisations/art-du-barber`. L’hébergement doit servir les fichiers HTML correspondants aux URL sans extension. Les fichiers du projet Art du Barber sont des exports WebP des supports fournis ; leurs textes imprimés restent fidèles aux originaux.
+
+Les pages `/realisations/bullrun` et `/realisations/mhani-terrain` utilisent `TechnicalProjectView.vue`. Leurs contenus, schémas fonctionnels, métadonnées et boutons sont définis dans `src/data/projects.js`.
