@@ -25,6 +25,10 @@ Zone desservie : France
 - Projet Art du Barber : https://redcorp-tech.com/realisations/art-du-barber
 - BULLRUN : https://redcorp-tech.com/realisations/bullrun
 - M’Hani, intervention terrain : https://redcorp-tech.com/realisations/mhani-terrain
+- Mentions légales : https://redcorp-tech.com/mentions-legales
+- Conditions générales de vente : https://redcorp-tech.com/cgv
+- Confidentialité : https://redcorp-tech.com/confidentialite
+- Cookies : https://redcorp-tech.com/cookies
 
 ## Art du Barber
 
