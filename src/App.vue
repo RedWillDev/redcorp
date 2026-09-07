@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import SiteHeader from './components/SiteHeader.vue'
+import SiteFooter from './components/SiteFooter.vue'
 import { site } from './data/site'
 const route = useRoute()
 const canonical = computed(() => site.url + (route.path === '/' ? '/' : route.path))
@@ -34,4 +35,5 @@ useHead(() => ({
 <template>
   <SiteHeader />
   <RouterView />
+  <SiteFooter />
 </template>
