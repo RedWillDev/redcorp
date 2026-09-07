@@ -2,6 +2,14 @@
 
 Site vitrine avec Vue, Vite, Vue Router, Tailwind CSS et pré-rendu Vite SSG.
 
+## Documentation complète
+
+- [Direction artistique](docs/direction-artistique.md) : identité RED, palettes jour/nuit, typographies et leurs choix, composition, univers clients et règles des logos.
+- [Architecture et contenus](docs/architecture-et-contenus.md) : responsabilités des fichiers, routes, données par projet, composants partagés et ajout d’une réalisation.
+- [Exploitation et qualité](docs/exploitation-et-qualite.md) : installation, publication, SEO, performances, responsive, vérifications et dépannage.
+
+Ces guides décrivent l’implémentation au 7 septembre 2026 et précisent les fonctionnalités présentes ainsi que leurs limites.
+
 ## Développement
 
 ```bash
