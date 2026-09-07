@@ -3,15 +3,15 @@ export const legal = {
     commercialName: 'RED',
     address: '9 rue des Colonnes, 75002 Paris, France',
     email: 'contact@redcorp-tech.com',
-    phone: 'À compléter',
-    legalIdentity: 'À compléter',
-    registration: 'À compléter',
-    vat: 'À compléter'
+    phone: 'Privé',
+    legalIdentity: 'Entreprise Individuel',
+    registration: '982655045',
+    vat: 'FR26982655045 Non Applicable'
   },
   host: {
-    name: 'À compléter',
-    address: 'À compléter',
-    contact: 'À compléter'
+    name: 'Cloudflare, Inc.',
+    address: '101 Townsend Street, San Francisco, CA 94107, États-Unis',
+    contact: '+1 650 319 8930'
   },
   pages: {
     legal: {
