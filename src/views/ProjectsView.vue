@@ -11,10 +11,12 @@ import FloatingAction from '../components/FloatingAction.vue'
     <p class="lead">{{ portfolio.introduction }}</p>
     <div class="project-list">
       <RouterLink v-for="project in projects" :key="project.slug" :to="`/realisations/${project.slug}`" class="project-preview">
-        <div v-if="project.card" class="project-preview-image"><img :src="project.card.front" :alt="project.card.frontAlt" width="1400" height="800" decoding="async"></div>
-        <div v-else-if="project.logo" class="project-preview-brand" :style="{ backgroundColor: project.logo.background }">
+        <div v-if="project.card" class="project-preview-visual project-preview-image"><img :src="project.card.front" :alt="project.card.frontAlt" width="1400" height="800" decoding="async"></div>
+        <div v-else-if="project.logo" class="project-preview-visual project-preview-brand" :style="{ backgroundColor: project.logo.background }">
+          <div class="project-brand-lockup">
           <img :src="project.logo.src" :alt="project.logo.alt" :width="project.logo.width" :height="project.logo.height" :class="{ 'brand-symbol': project.logo.wordmark }" loading="lazy" decoding="async">
           <strong v-if="project.logo.wordmark">{{ project.logo.wordmark }}</strong>
+          </div>
         </div>
         <div><p class="eyebrow">{{ project.category }}</p><h2>{{ project.name }}</h2><p>{{ project.location }}</p><span>{{ portfolio.open }} ↗</span></div>
       </RouterLink>
@@ -26,15 +28,17 @@ import FloatingAction from '../components/FloatingAction.vue'
 <style scoped>
 .portfolio-page { min-height: 85vh; }
 .project-list { margin-top: 70px; }
-.project-preview { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 48px; border-block: 1px solid var(--border); padding-block: 36px; }
-.project-preview-image { background: #e6ddcb; padding: 45px; perspective: 1200px; }
-.project-preview-image img { width: 100%; height: auto; transform: rotateY(-9deg) rotateZ(-3deg); box-shadow: 0 20px 30px #100c0533; }
-.project-preview h2 { font-size: 38px; margin: 0 0 15px; }
-.project-preview p { color: var(--muted); }
+.project-preview { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 48px; border-block: 1px solid var(--border); padding-block: 36px; }
+.project-preview > * { min-width: 0; }
+.project-preview-visual { position: relative; width: 100%; min-width: 0; aspect-ratio: 8 / 5; overflow: hidden; }
+.project-preview-image { background: #e6ddcb; perspective: 1200px; }
+.project-preview-image img { position: absolute; inset: 15%; width: 70%; height: 70%; object-fit: contain; transform: rotateY(-9deg) rotateZ(-3deg); }
+.project-preview h2 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 15px; overflow-wrap: anywhere; }
+.project-preview p { color: var(--muted); overflow-wrap: anywhere; }
 .project-preview span { display: inline-block; margin-top: 25px; color: var(--red); }
-.project-preview-brand { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; min-width: 0; min-height: 300px; padding: clamp(30px, 5vw, 60px); aspect-ratio: 1.6; }
-.project-preview-brand img { display: block; width: 100%; max-width: 400px; height: auto; object-fit: contain; }
-.project-preview-brand img.brand-symbol { width: clamp(110px, 12vw, 160px); }
-.project-preview-brand strong { color: #292524; font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -.04em; }
-@media(max-width: 700px) { .project-preview { grid-template-columns: 1fr; gap: 25px; } .project-preview-image { padding: 25px; } }
+.project-brand-lockup { position: absolute; inset: 15%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-width: 0; }
+.project-brand-lockup img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.project-brand-lockup img.brand-symbol { width: 100%; height: 70%; }
+.project-brand-lockup strong { max-width: 100%; color: #292524; font-size: clamp(20px, 4vw, 38px); line-height: 1; font-weight: 800; letter-spacing: -.04em; }
+@media(max-width: 700px) { .project-preview { grid-template-columns: minmax(0, 1fr); gap: 25px; } }
 </style>
