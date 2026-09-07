@@ -2,6 +2,7 @@ const assets = '/projects/art-du-barber/'
 
 export const barber = {
   slug: 'art-du-barber',
+  previewLogo: { src: assets + 'logo.webp', alt: 'Logo Art du Barber, lettrage blanc et or avec moustache dorée', width: 420, height: 420, background: '#000000' },
   name: 'Art du Barber',
   category: 'Identité visuelle · Carte de visite · Flyer',
   location: 'Le Havre · Bléville',
