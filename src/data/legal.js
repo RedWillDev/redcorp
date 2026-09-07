@@ -1,16 +1,12 @@
 export const legal = {
   publisher: {
-    name: 'Azzouz Redouane',
     commercialName: 'RED',
-    status: 'Entrepreneur individuel (EI)',
-    siren: '982 655 045',
-    siret: '982 655 045 00010',
-    vat: 'FR26 982655045',
-    rcs: 'R.C.S. Paris 982 655 045',
     address: '9 rue des Colonnes, 75002 Paris, France',
     email: 'contact@redcorp-tech.com',
-    phone: 'À compléter si une ligne téléphonique professionnelle doit être publiée',
-    director: 'Azzouz Redouane'
+    phone: 'À compléter',
+    legalIdentity: 'À compléter',
+    registration: 'À compléter',
+    vat: 'À compléter'
   },
   host: {
     name: 'À compléter',
