@@ -2,6 +2,8 @@
 import { projects } from '../data/projects'
 import { portfolio } from '../data/portfolio'
 import FloatingAction from '../components/FloatingAction.vue'
+
+const projectPreviews = projects.map(project => ({ ...project, logo: project.previewLogo || project.logo }))
 </script>
 
 <template>
@@ -10,9 +12,8 @@ import FloatingAction from '../components/FloatingAction.vue'
     <h1>{{ portfolio.title }}</h1>
     <p class="lead">{{ portfolio.introduction }}</p>
     <div class="project-list">
-      <RouterLink v-for="project in projects" :key="project.slug" :to="`/realisations/${project.slug}`" class="project-preview">
-        <div v-if="project.card" class="project-preview-visual project-preview-image"><img :src="project.card.front" :alt="project.card.frontAlt" width="1400" height="800" decoding="async"></div>
-        <div v-else-if="project.logo" class="project-preview-visual project-preview-brand" :style="{ backgroundColor: project.logo.background }">
+      <RouterLink v-for="project in projectPreviews" :key="project.slug" :to="`/realisations/${project.slug}`" class="project-preview">
+        <div v-if="project.logo" class="project-preview-visual project-preview-brand" :style="{ backgroundColor: project.logo.background }">
           <div class="project-brand-lockup">
           <img :src="project.logo.src" :alt="project.logo.alt" :width="project.logo.width" :height="project.logo.height" :class="{ 'brand-symbol': project.logo.wordmark }" loading="lazy" decoding="async">
           <strong v-if="project.logo.wordmark">{{ project.logo.wordmark }}</strong>
@@ -31,8 +32,6 @@ import FloatingAction from '../components/FloatingAction.vue'
 .project-preview { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 48px; border-block: 1px solid var(--border); padding-block: 36px; }
 .project-preview > * { min-width: 0; }
 .project-preview-visual { position: relative; width: 100%; min-width: 0; aspect-ratio: 8 / 5; overflow: hidden; }
-.project-preview-image { background: #e6ddcb; perspective: 1200px; }
-.project-preview-image img { position: absolute; inset: 15%; width: 70%; height: 70%; object-fit: contain; transform: rotateY(-9deg) rotateZ(-3deg); }
 .project-preview h2 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 15px; overflow-wrap: anywhere; }
 .project-preview p { color: var(--muted); overflow-wrap: anywhere; }
 .project-preview span { display: inline-block; margin-top: 25px; color: var(--red); }
